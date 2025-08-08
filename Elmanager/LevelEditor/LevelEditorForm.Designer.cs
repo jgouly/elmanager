@@ -104,7 +104,7 @@ namespace Elmanager.LevelEditor
             RenderingSettingsToolStripMenuItem = new ToolStripMenuItem();
             GLControlSettings settings = GLControlSettings.Default;
             settings.Flags = ContextFlags.ForwardCompatible;
-            settings.APIVersion = new Version(2, 1, 0, 0);
+            settings.APIVersion = new Version(4, 1, 0, 0);
 //throw new ArgumentException("Parameter cannot be null", "a");
             EditorControl = new GLControl(settings);
             OpenFileDialog1 = new OpenFileDialog();
