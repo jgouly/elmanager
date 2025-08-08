@@ -154,7 +154,7 @@ namespace OpenTK.WinForms
             {
                 APIVersion = APIVersion,
                 AutoLoadBindings = AutoLoadBindings,
-                Flags = Flags,
+                Flags = ContextFlags.ForwardCompatible,
                 Profile = Profile,
                 API = API,
                 IsEventDriven = IsEventDriven,
@@ -182,7 +182,7 @@ namespace OpenTK.WinForms
             {
                 APIVersion = FixupVersion(APIVersion),
                 AutoLoadBindings = AutoLoadBindings,
-                Flags = Flags,
+                Flags = ContextFlags.ForwardCompatible,
                 Profile = Profile,
                 API = API,
                 IsEventDriven = IsEventDriven,
