@@ -591,7 +591,16 @@ internal class ElmaRenderer : IDisposable
 
     internal void Swap()
     {
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "1");
+}
         _gfxContext.SwapBuffers();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "2");
+}
     }
 
     private IEnumerable<(LevObject, int)> GetVisibleObjects(Level lev, SceneSettings sceneSettings)
