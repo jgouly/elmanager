@@ -43,6 +43,7 @@ internal class ElmaRenderer : IDisposable
     private int _depthStencilRenderBuffer;
     private int _maxRenderbufferSize;
     private LgrCache _lgrCache = new();
+private int NumDraws;
 
     internal ElmaRenderer(GLControl renderingTarget, RenderingSettings settings)
     {
@@ -298,7 +299,7 @@ throw new ArgumentException("Parameter cannot be null", "14");
         GL.LoadIdentity();
 if (GL.GetError() != ErrorCode.NoError)
 {
-throw new ArgumentException("Parameter cannot be null", "a15");
+throw new ArgumentException("Parameter cannot be null", $"a15: numdraws: {NumDraws}");
 }
         GL.Ortho(cam.XMin, cam.XMax, cam.YMin, cam.YMax, ZNear, ZFar);
 if (GL.GetError() != ErrorCode.NoError)
@@ -1047,6 +1048,7 @@ throw new ArgumentException("Parameter cannot be null", "2");
         GL.TexEnv(TextureEnvTarget.TextureEnv, TextureEnvParameter.TextureEnvMode, (float)TextureEnvMode.Replace);
 
         _maxRenderbufferSize = Math.Min(GL.GetInteger(GetPName.MaxRenderbufferSize), 4096);
+        NumDraws = 0;
 
         if (GL.GetError() != ErrorCode.NoError || disableFrameBuffer)
         {
