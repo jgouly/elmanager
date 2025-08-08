@@ -14,10 +14,10 @@ env:
   DOTNET_NOLOGO: 1
 jobs:
   build:
-    runs-on: [windows-11-arm]
+    runs-on: [windows-latest]
     strategy:
       matrix:
-        configuration: [WineRelease]
+        configuration: [Release, WineRelease]
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
@@ -32,12 +32,12 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Elmanager-${{ matrix.configuration }}
-        path: Elmanager/bin/${{ matrix.configuration }}/net8.0-windows7.0/win-arm64/publish/Elmanager.exe
+        path: Elmanager/bin/${{ matrix.configuration }}/net8.0-windows7.0/win-x64/publish/Elmanager.exe
         compression-level: 9
     - name: Upload WineRelease artifact
       if: matrix.configuration == 'WineRelease'
       uses: actions/upload-artifact@v4
       with:
         name: Elmanager-${{ matrix.configuration }}
-        path: Elmanager/bin/${{ matrix.configuration }}/net8.0-windows7.0/win-arm64/publish/
+        path: Elmanager/bin/${{ matrix.configuration }}/net8.0-windows7.0/win-x64/publish/
         compression-level: 9

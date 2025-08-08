@@ -10,7 +10,7 @@
         <PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
         <SelfContained Condition="'$(Configuration)' == 'Release'">true</SelfContained>
         <PublishReadyToRun>false</PublishReadyToRun>
-        <RuntimeIdentifier>win-arm64</RuntimeIdentifier>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
         <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <ApplicationIcon>Icons/Elma.ico</ApplicationIcon>
