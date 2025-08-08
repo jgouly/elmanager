@@ -124,12 +124,12 @@ namespace Elmanager.ReplayViewer
             ViewerBox.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
             ViewerBox.APIVersion = new Version(3, 3, 0, 0);
             ViewerBox.Dock = DockStyle.Fill;
-            ViewerBox.Flags = OpenTK.Windowing.Common.ContextFlags.Default;
+            ViewerBox.Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible;
             ViewerBox.IsEventDriven = true;
             ViewerBox.Location = new Point(788, 0);
             ViewerBox.Margin = new Padding(6);
             ViewerBox.Name = "ViewerBox";
-            ViewerBox.Profile = OpenTK.Windowing.Common.ContextProfile.Compatability;
+            ViewerBox.Profile = OpenTK.Windowing.Common.ContextProfile.Core;
             ViewerBox.Size = new Size(678, 670);
             ViewerBox.TabIndex = 100;
             ViewerBox.MouseDown += ViewerMouseDown;

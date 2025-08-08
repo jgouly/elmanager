@@ -743,12 +743,12 @@ namespace Elmanager.LevelEditor
             EditorControl.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
             EditorControl.APIVersion = new Version(3, 3, 0, 0);
             EditorControl.Dock = DockStyle.Fill;
-            EditorControl.Flags = OpenTK.Windowing.Common.ContextFlags.Default;
+            EditorControl.Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible;
             EditorControl.IsEventDriven = true;
             EditorControl.Location = new Point(168, 175);
             EditorControl.Margin = new Padding(6);
             EditorControl.Name = "EditorControl";
-            EditorControl.Profile = OpenTK.Windowing.Common.ContextProfile.Compatability;
+            EditorControl.Profile = OpenTK.Windowing.Common.ContextProfile.Core
             EditorControl.Size = new Size(1690, 797);
             EditorControl.TabIndex = 2;
             EditorControl.DragDrop += ItemsDropped;
