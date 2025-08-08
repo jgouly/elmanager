@@ -102,7 +102,9 @@ namespace Elmanager.LevelEditor
             ConfigurationToolStripMenuItem = new ToolStripMenuItem();
             MainConfigMenuItem = new ToolStripMenuItem();
             RenderingSettingsToolStripMenuItem = new ToolStripMenuItem();
-            EditorControl = new GLControl(new OpenTK.Graphics.GraphicsMode(), 3, 3, OpenTK.Graphics.GraphicsContextFlags.ForwardCompatible);
+            GLControlSettings settings = GLControlSettings.Default;
+            settings.Flags = ContextFlags.ForwardCompatible;
+            EditorControl = new GLControl(settings);
             OpenFileDialog1 = new OpenFileDialog();
             StatusStrip1 = new StatusStrip();
             zoomLabel = new ToolStripStatusLabel();
