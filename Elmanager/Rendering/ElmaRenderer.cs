@@ -119,6 +119,11 @@ internal class ElmaRenderer : IDisposable
             GL.Vertex2(x + Math.Cos(i * 360 / (double)accuracy * Math.PI / 180) * radius,
                 y + Math.Sin(i * 360 / (double)accuracy * Math.PI / 180) * radius);
         GL.End();
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "3");
+}
     }
 
     internal void DrawCircle(Vector v, double radius, Color circleColor, int accuracy)
@@ -142,6 +147,11 @@ internal class ElmaRenderer : IDisposable
         GL.Vertex3(v1.X, v1.Y, depth);
         GL.Vertex3(v2.X, v2.Y, depth);
         GL.End();
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "4");
+}
     }
 
     private void DrawLine(double x1, double y1, double x2, double y2, Color color, double depth = 0)
@@ -151,6 +161,11 @@ internal class ElmaRenderer : IDisposable
         GL.Vertex3(x1, y1, depth);
         GL.Vertex3(x2, y2, depth);
         GL.End();
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "5");
+}
     }
 
     private void DrawLineFast(double x1, double y1, double x2, double y2, double depth = 0)
@@ -166,6 +181,11 @@ internal class ElmaRenderer : IDisposable
         foreach (var x in polygon.Vertices)
             GL.Vertex3(x.X, x.Y, depth);
         GL.End();
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "6");
+}
     }
 
     internal void DrawPoint(Vector v, Color color, double depth = 0)
@@ -174,6 +194,10 @@ internal class ElmaRenderer : IDisposable
         GL.Begin(PrimitiveType.Points);
         GL.Vertex3(v.X, v.Y, depth);
         GL.End();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "7");
+}
     }
 
     private void DrawPoint(double x, double y, Color color, double depth = 0)
@@ -182,6 +206,10 @@ internal class ElmaRenderer : IDisposable
         GL.Begin(PrimitiveType.Points);
         GL.Vertex3(x, y, depth);
         GL.End();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "8");
+}
     }
 
     internal void DrawPolygon(Polygon polygon, Color color, double depth = 0)
@@ -191,6 +219,11 @@ internal class ElmaRenderer : IDisposable
         foreach (var x in polygon.Vertices)
             GL.Vertex3(x.X, x.Y, depth);
         GL.End();
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "9");
+}
     }
 
     internal void DrawRectangle(double x1, double y1, double x2, double y2, Color rectColor)
@@ -202,6 +235,10 @@ internal class ElmaRenderer : IDisposable
         GL.Vertex2(x2, y2);
         GL.Vertex2(x1, y2);
         GL.End();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "10");
+}
     }
 
     private void DrawRectangle(double x1, double y1, double x2, double y2)
@@ -212,6 +249,10 @@ internal class ElmaRenderer : IDisposable
         GL.Vertex2(x2, y2);
         GL.Vertex2(x1, y2);
         GL.End();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "11");
+}
     }
 
     internal void DrawRectangle(Vector v1, Vector v2, Color rectColor)
@@ -223,11 +264,20 @@ internal class ElmaRenderer : IDisposable
         GL.Vertex2(v2.X, v2.Y);
         GL.Vertex2(v1.X, v2.Y);
         GL.End();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "12");
+}
     }
 
     internal void MakeCurrent()
     {
         _gfxContext.MakeCurrent();
+
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "13");
+}
     }
 
     internal void MakeNoneCurrent()
@@ -241,6 +291,10 @@ internal class ElmaRenderer : IDisposable
         var aspectRatio = cam.AspectRatio;
         var centerX = cam.CenterX;
         var centerY = cam.CenterY;
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "14");
+}
         GL.LoadIdentity();
         GL.Ortho(cam.XMin, cam.XMax, cam.YMin, cam.YMax, ZNear, ZFar);
 
@@ -257,6 +311,10 @@ internal class ElmaRenderer : IDisposable
             if (!k.IsGrass)
                 DrawFilledTrianglesFast(k.Decomposition, ZFar - (ZFar - ZNear) * SkyDepth);
         GL.End();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "15");
+}
         GL.ColorMask(true, true, true, true);
         GL.Enable(EnableCap.Texture2D);
         GL.Enable(EnableCap.DepthTest);
@@ -329,6 +387,10 @@ internal class ElmaRenderer : IDisposable
             }
         }
 
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "16");
+}
         GL.Enable(EnableCap.AlphaTest);
         if (OpenGlLgr != null)
         {
@@ -418,6 +480,10 @@ internal class ElmaRenderer : IDisposable
         GL.Disable(EnableCap.DepthTest);
         GL.Disable(EnableCap.AlphaTest);
 
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "16");
+}
         GL.Enable(EnableCap.Blend);
         if (settings.ShowGrid)
         {
