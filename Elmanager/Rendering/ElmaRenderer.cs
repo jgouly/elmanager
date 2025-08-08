@@ -295,7 +295,6 @@ if (GL.GetError() != ErrorCode.NoError)
 {
 throw new ArgumentException("Parameter cannot be null", "14");
 }
-        GL.End();
         GL.LoadIdentity();
 if (GL.GetError() != ErrorCode.NoError)
 {
