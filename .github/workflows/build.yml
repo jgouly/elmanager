@@ -17,7 +17,7 @@ jobs:
     runs-on: [windows-latest]
     strategy:
       matrix:
-        configuration: [Release, WineRelease]
+        configuration: [WineRelease]
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
