@@ -48,7 +48,7 @@ namespace OpenTK.WinForms
         /// <summary>
         /// Gets or sets a value representing the current graphics profile flags.
         /// </summary>
-        public ContextFlags Flags { get; set; } = ContextFlags.Default;
+        public ContextFlags Flags { get; set; } = ContextFlags.ForwardCompatible;
 
         /// <summary>
         /// Gets or sets a value representing the current graphics API profile.
