@@ -296,17 +296,57 @@ if (GL.GetError() != ErrorCode.NoError)
 throw new ArgumentException("Parameter cannot be null", "14");
 }
         GL.LoadIdentity();
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a15");
+}
         GL.Ortho(cam.XMin, cam.XMax, cam.YMin, cam.YMax, ZNear, ZFar);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a16");
+}
 
         GL.Clear(ClearBufferMask.DepthBufferBit | ClearBufferMask.StencilBufferBit |
                  ClearBufferMask.ColorBufferBit);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a17");
+}
         GL.Enable(EnableCap.StencilTest);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a17");
+}
         GL.Disable(EnableCap.Texture2D);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a18");
+}
         GL.Disable(EnableCap.Blend);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a19");
+}
         GL.StencilOp(StencilOp.Incr, StencilOp.Keep, StencilOp.Decr);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a20");
+}
         GL.StencilFunc(StencilFunction.Equal, GroundStencil, StencilMask);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a21");
+}
         GL.ColorMask(false, false, false, false);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a22");
+}
         GL.Begin(PrimitiveType.Triangles);
+if (GL.GetError() != ErrorCode.NoError)
+{
+throw new ArgumentException("Parameter cannot be null", "a23");
+}
         foreach (var k in lev.Polygons.Concat(sceneSettings.TransientElements.Polygons))
             if (!k.IsGrass)
                 DrawFilledTrianglesFast(k.Decomposition, ZFar - (ZFar - ZNear) * SkyDepth);
