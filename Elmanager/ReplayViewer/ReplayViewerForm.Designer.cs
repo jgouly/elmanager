@@ -122,7 +122,7 @@ namespace Elmanager.ReplayViewer
             // ViewerBox
             // 
             ViewerBox.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
-            ViewerBox.APIVersion = new Version(3, 3, 0, 0);
+            ViewerBox.APIVersion = new Version(4, 1, 0, 0);
             ViewerBox.Dock = DockStyle.Fill;
             ViewerBox.Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible;
             ViewerBox.IsEventDriven = true;
