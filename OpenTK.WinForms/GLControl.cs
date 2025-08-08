@@ -259,6 +259,7 @@ namespace OpenTK.WinForms
                 return;
 
             NativeWindowSettings nativeWindowSettings = glControlSettings.ToNativeWindowSettings();
+						nativeWindowSettings.Flags = ContextFlags.ForwardCompatible;
 
             _nativeWindow = new NativeWindow(nativeWindowSettings);
             _nativeWindow.FocusedChanged += OnNativeWindowFocused;
