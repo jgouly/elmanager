@@ -603,6 +603,7 @@ throw new ArgumentException("Parameter cannot be null", "16");
 
             GL.End();
         }
+NumDraws += 1;
     }
 
     private void DrawPictures(IEnumerable<GraphicElement> pics, ElmaCamera cam, RenderingSettings settings)
