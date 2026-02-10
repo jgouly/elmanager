@@ -19,9 +19,9 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|x86 = Release|x86
+		Release|ARM64 = Release|ARM64
 		WineRelease|Any CPU = WineRelease|Any CPU
-		WineRelease|x86 = WineRelease|x86
+		WineRelease|ARM64 = WineRelease|ARM64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,12 +30,12 @@ Global
 		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Debug|x86.Build.0 = Debug|x86
 		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Release|x86.ActiveCfg = Release|x86
-		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Release|x86.Build.0 = Release|x86
+		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Release|ARM64.ActiveCfg = Release|ARM64
+		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.Release|ARM64.Build.0 = Release|x86
 		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.WineRelease|Any CPU.ActiveCfg = WineRelease|Any CPU
 		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.WineRelease|Any CPU.Build.0 = WineRelease|Any CPU
-		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.WineRelease|x86.ActiveCfg = WineRelease|Any CPU
-		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.WineRelease|x86.Build.0 = WineRelease|Any CPU
+		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.WineRelease|ARM64.ActiveCfg = WineRelease|Any CPU
+		{43DD2B25-6D1D-4ECD-9193-C60535FD75F1}.WineRelease|ARM64.Build.0 = WineRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
