@@ -30,8 +30,8 @@ internal partial class CustomShapeControl : UserControl
 
         shapeLevelControl = new LevelControl(sharedContext, sceneSettings, renderingSettings, elmaRenderer, shape.Level);
         shapeLevelControl.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
-        shapeLevelControl.APIVersion = new Version(3, 3, 0, 0);
-        shapeLevelControl.Flags = OpenTK.Windowing.Common.ContextFlags.Default;
+        shapeLevelControl.APIVersion = new Version(3, 2, 0, 0);
+        shapeLevelControl.Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible;
         shapeLevelControl.Location = new System.Drawing.Point(0, 0);
         shapeLevelControl.Size = new Size(102, 102);
         shapeLevelControl.Margin = new Padding(0);
