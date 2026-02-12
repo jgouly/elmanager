@@ -25,7 +25,7 @@ internal class LevelControl : GLControl
     internal LevelControl(GLControl sharedContext, SceneSettings sceneSettings, RenderingSettings renderingSettings, ElmaRenderer elmaRenderer, Level level) :
         base(new GLControlSettings {
             AutoLoadBindings = false,
-            Profile = ContextProfile.Compatability
+            Profile = ContextProfile.Core
         })
     {
         _renderingSettings = renderingSettings;
