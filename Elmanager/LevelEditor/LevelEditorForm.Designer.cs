@@ -739,7 +739,7 @@ namespace Elmanager.LevelEditor
             EditorControl.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
             EditorControl.APIVersion = new Version(2, 1, 0, 0);
             EditorControl.Dock = DockStyle.Fill;
-            EditorControl.Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible;
+            EditorControl.Flags = OpenTK.Windowing.Common.ContextFlags.Default;
             EditorControl.IsEventDriven = true;
             EditorControl.Location = new Point(168, 175);
             EditorControl.Margin = new Padding(6);
