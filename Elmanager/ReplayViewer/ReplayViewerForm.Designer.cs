@@ -129,7 +129,7 @@ namespace Elmanager.ReplayViewer
             ViewerBox.Location = new Point(788, 0);
             ViewerBox.Margin = new Padding(6);
             ViewerBox.Name = "ViewerBox";
-            ViewerBox.Profile = OpenTK.Windowing.Common.ContextProfile.Compatability;
+            ViewerBox.Profile = OpenTK.Windowing.Common.ContextProfile.Any;
             ViewerBox.Size = new Size(678, 670);
             ViewerBox.TabIndex = 100;
             ViewerBox.MouseDown += ViewerMouseDown;

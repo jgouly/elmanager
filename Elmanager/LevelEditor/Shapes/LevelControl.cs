@@ -26,7 +26,7 @@ internal class LevelControl : GLControl
         base(new GLControlSettings {
             AutoLoadBindings = false,
             APIVersion = new Version(2, 1, 0, 0),
-            Profile = ContextProfile.Compatability,
+            Profile = ContextProfile.Any,
             Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible
         })
     {
