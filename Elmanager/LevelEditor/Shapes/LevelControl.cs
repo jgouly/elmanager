@@ -25,7 +25,7 @@ internal class LevelControl : GLControl
     internal LevelControl(GLControl sharedContext, SceneSettings sceneSettings, RenderingSettings renderingSettings, ElmaRenderer elmaRenderer, Level level) :
         base(new GLControlSettings {
             AutoLoadBindings = false,
-            APIVersion = new Version(3, 2, 0, 0),
+            APIVersion = new Version(3, 3, 0, 0),
             Profile = ContextProfile.Core,
             Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible
         })

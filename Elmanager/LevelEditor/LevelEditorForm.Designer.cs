@@ -737,7 +737,7 @@ namespace Elmanager.LevelEditor
             // 
             EditorControl.AllowDrop = true;
             EditorControl.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
-            EditorControl.APIVersion = new Version(3, 2, 0, 0);
+            EditorControl.APIVersion = new Version(3, 3, 0, 0);
             EditorControl.Dock = DockStyle.Fill;
             EditorControl.Flags = OpenTK.Windowing.Common.ContextFlags.ForwardCompatible;
             EditorControl.IsEventDriven = true;
