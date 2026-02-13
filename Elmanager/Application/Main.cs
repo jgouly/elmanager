@@ -48,6 +48,7 @@ internal static class Global
     {
         if (args.Count == 0){
 Console.WriteLine("Hello world");
+throw new ArgumentException("x must be positive");
             ComponentManager.LaunchMainForm();
 }
         else if (args[0] == "/replaymanager")
