@@ -51,21 +51,21 @@ throw new ArgumentException("x must be positive");
 
     private static void ParseCommandLine(IList<string> args)
     {
-        if (args.Count == 0)
+        if (args.Count == 1)
             ComponentManager.LaunchMainForm();
-        else if (args[0] == "/replaymanager")
+        else if (args[1] == "/replaymanager")
             ComponentManager.LaunchReplayManager();
-        else if (args[0] == "/leveleditor")
+        else if (args[1] == "/leveleditor")
             ComponentManager.LaunchLevelEditor();
-        else if (args[0] == "/levelmanager")
+        else if (args[1] == "/levelmanager")
             ComponentManager.LaunchLevelManager();
-        else if (args[0].EndsWith(DirUtils.LevExtension, StringComparison.OrdinalIgnoreCase))
+        else if (args[1].EndsWith(DirUtils.LevExtension, StringComparison.OrdinalIgnoreCase))
             ComponentManager.LaunchLevelEditor(args[0]);
-        else if (args[0].EndsWith(DirUtils.RecExtension, StringComparison.OrdinalIgnoreCase))
+        else if (args[1].EndsWith(DirUtils.RecExtension, StringComparison.OrdinalIgnoreCase))
         {
             try
             {
-                var rp = Replay.FromPath(args[0]);
+                var rp = Replay.FromPath(args[1]);
                 if (rp.Obj.LevelExists)
                 {
                     ComponentManager.LaunchReplayViewer(rp);
@@ -80,7 +80,7 @@ throw new ArgumentException("x must be positive");
             }
         }
         else
-            UiUtils.ShowError("Invalid command line argument: " + args[0]);
+            UiUtils.ShowError("Invalid command line argument: " + args[1]);
     }
 
     private static void Startup(IList<string> args)
