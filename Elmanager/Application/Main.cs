@@ -34,7 +34,7 @@ internal static class Global
     static void Main(string[] args)
     {
 
-        if (args.Count == 0){
+        if (args.Length == 0){
 throw new ArgumentException("x must be positive");
 }
         Startup(args);
