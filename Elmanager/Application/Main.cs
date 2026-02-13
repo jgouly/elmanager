@@ -33,6 +33,10 @@ internal static class Global
     [STAThread]
     static void Main(string[] args)
     {
+
+        if (args.Count == 0){
+throw new ArgumentException("x must be positive");
+]
         Startup(args);
     }
 
@@ -46,11 +50,8 @@ internal static class Global
 
     private static void ParseCommandLine(IList<string> args)
     {
-        if (args.Count == 0){
-Console.WriteLine("Hello world");
-throw new ArgumentException("x must be positive");
+        if (args.Count == 0)
             ComponentManager.LaunchMainForm();
-}
         else if (args[0] == "/replaymanager")
             ComponentManager.LaunchReplayManager();
         else if (args[0] == "/leveleditor")
