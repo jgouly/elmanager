@@ -46,8 +46,10 @@ internal static class Global
 
     private static void ParseCommandLine(IList<string> args)
     {
-        if (args.Count == 0)
+        if (args.Count == 0){
+Console.WriteLine("Hello world");
             ComponentManager.LaunchMainForm();
+}
         else if (args[0] == "/replaymanager")
             ComponentManager.LaunchReplayManager();
         else if (args[0] == "/leveleditor")
