@@ -33,6 +33,7 @@ internal static class Global
     [STAThread]
     static void Main(string[] args)
     {
+args = Environment.GetCommandLineArgs();
 
         if (args.Length == 0){
 throw new ArgumentException("x must be positive");
