@@ -36,7 +36,7 @@ internal static class Global
 
         if (args.Count == 0){
 throw new ArgumentException("x must be positive");
-]
+}
         Startup(args);
     }
 
